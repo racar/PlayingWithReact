@@ -15,14 +15,17 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
           <br/><h1>{this.props.children}</h1>
+          Add some event:
+          <button onClick={this.launchAlert}>Give me an alert!</button>
         </p>
       </div>
     );
 
-
   }
 
-
+launchAlert(){
+  alert('Take this!')
+}
 
 }
 
