@@ -13,6 +13,8 @@ var Checkbox = React.createClass({
     return(
       <div>
       <input type="checkbox" onChange={this.handleCheck}/>
+      <textarea ref="txtArea"></textarea>
+      <button onClick={this.saveNote}>Save</button>
       <p>This bos is: {msg}</p>
       </div>
     );
@@ -25,6 +27,9 @@ var Checkbox = React.createClass({
   handleCheck: function(){
     //this.state.checked = true
     this.setState({checked: !this.state.checked})
+  },
+  saveNote: function(){
+    alert('Saving... '+this.refs.txtArea.value)
   }
 
 });
