@@ -5,6 +5,7 @@ import App from './App';
 import Checkbox from './Checkbox';
 import Menu from './menu';
 
+
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<div>
@@ -12,5 +13,6 @@ ReactDOM.render(<div>
                   <Checkbox/>
                   <Menu count={101}/>
                   <App text="copy"/>
-                </div>, document.getElementById('root'));
-registerServiceWorker();
+                  
+                  </div>, document.getElementById('root'));
+                registerServiceWorker();

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import Dish from './dish';
 
 var Menu = React.createClass({
   propTypes:{
@@ -13,8 +14,23 @@ var Menu = React.createClass({
         }
     }
   },
+  getInitialState: function(){
+      return{
+        dishes: [
+          "Quinoa burgers",
+          "Lentils and rise",
+          "Falafel"
+        ]
+      }
+  },
   render: function(){
-    return <div>{this.props.count}</div>
+    return (<div>
+            {this.state.dishes.map(function(dish,i){
+              return (
+                <Dish key={i}>{dish}</Dish>
+              );
+            })}
+            </div>);
   }
 });
 
